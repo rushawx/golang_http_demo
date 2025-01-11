@@ -1,0 +1,73 @@
+{
+	"info": {
+		"_postman_id": "049520f5-6988-435e-9ebc-8b421a47efef",
+		"name": "ToDo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "33181374"
+	},
+	"item": [
+		{
+			"name": "CreateTask",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"NewToDo\",\n    \"description\": \"SomeDesc\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateTask",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"Title\": \"NewToDo\",\n    \"Description\": \"SomeDescNew\",\n    \"Done\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/tasks/2eeeff3c-e348-4a05-bc05-062ace01a96c"
+			},
+			"response": []
+		},
+		{
+			"name": "GetTaskById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/tasks/c16f7695-e81a-4118-92a2-0a0a6431f1d8"
+			},
+			"response": []
+		},
+		{
+			"name": "GetAllTasks",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/tasks"
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteTask",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://localhost:8080/tasks/c16f7695-e81a-4118-92a2-0a0a6431f1d8"
+			},
+			"response": []
+		}
+	]
+}
